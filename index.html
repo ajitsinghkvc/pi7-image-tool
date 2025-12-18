@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pi7 Image Tool – Add Name & Date on Photo</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Pi7 Image Tool</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h1>Pi7 Image Tool</h1>
-<p>Add Name & Date to Passport or Application Photos</p>
+<p>Add Name & Date on Multiple Photos – A4 Ready</p>
 
-<div class="container">
+<div class="panel">
+  <input type="file" id="upload" accept="image/*" multiple>
 
-  <input type="file" id="upload" accept="image/*">
+  <input type="text" id="nameText" placeholder="Enter Name">
+  <input type="date" id="dateText">
 
-  <div class="controls">
-    <input type="text" id="nameText" placeholder="Enter Name">
-    <input type="date" id="dateText">
+  <select id="size">
+    <option value="413x531">India (3.5 x 4.5 cm)</option>
+    <option value="600x600">USA (2 x 2 inch)</option>
+  </select>
 
-    <select id="photoSize">
-      <option value="3.5x4.5">3.5 x 4.5 cm (India)</option>
-      <option value="2x2">2 x 2 inch (USA)</option>
-      <option value="custom">Custom</option>
-    </select>
+  <input type="number" id="fontSize" value="20">
+  <input type="color" id="textColor" value="#000000">
 
-    <input type="color" id="textColor" value="#000000">
-    <input type="number" id="fontSize" value="24">
-  </div>
-
-  <canvas id="canvas"></canvas>
-
-  <button onclick="downloadImage()">Download Image</button>
+  <button onclick="generateA4()">Generate A4 Sheet</button>
+  <button onclick="download()">Download</button>
 </div>
+
+<canvas id="canvas"></canvas>
 
 <script src="script.js"></script>
 </body>
