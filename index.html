@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pi7 Image Tool – Add Name & Date on Photo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Pi7 Image Tool</h1>
+<p>Add Name & Date to Passport or Application Photos</p>
+
+<div class="container">
+
+  <input type="file" id="upload" accept="image/*">
+
+  <div class="controls">
+    <input type="text" id="nameText" placeholder="Enter Name">
+    <input type="date" id="dateText">
+
+    <select id="photoSize">
+      <option value="3.5x4.5">3.5 x 4.5 cm (India)</option>
+      <option value="2x2">2 x 2 inch (USA)</option>
+      <option value="custom">Custom</option>
+    </select>
+
+    <input type="color" id="textColor" value="#000000">
+    <input type="number" id="fontSize" value="24">
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <button onclick="downloadImage()">Download Image</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
