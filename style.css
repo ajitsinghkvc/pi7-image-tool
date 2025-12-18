@@ -1,31 +1,31 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #f2f2f2;
   text-align: center;
 }
 
-.container {
+.panel {
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   width: 90%;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   border-radius: 10px;
 }
 
-.controls input, .controls select {
-  margin: 5px;
+.panel input, .panel select {
+  margin: 6px;
   padding: 6px;
 }
 
 canvas {
-  margin-top: 15px;
-  border: 1px solid #ccc;
-  max-width: 100%;
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  max-width: 95%;
 }
 
 button {
-  margin-top: 15px;
-  padding: 10px 20px;
+  padding: 10px 15px;
+  margin: 8px;
   cursor: pointer;
 }
